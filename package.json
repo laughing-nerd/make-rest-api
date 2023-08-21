@@ -1,0 +1,25 @@
+{
+  "name": "make-rest-api",
+  "version": "1.0.0",
+  "description": "A quick starter REST API creator for you. You can change the file configurations based on your requirements",
+  "main": "index.js",
+  "keywords": "REST API starter, REST API, Express REST API",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/laughing-nerd/create-rest-api"
+  },
+  "bin": "./index.js",
+  "keywords": "REST API, REST API STARTER, Express REST API",
+  "author": "laughing-nerd",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "chalk": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

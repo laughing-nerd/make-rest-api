@@ -1,0 +1,21 @@
+{
+  "name": <NAME>,
+  "version": "1.0.0",
+  "description": "Starter REST API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": <cors_LATEST>,
+    "dotenv": <dotenv_LATEST>,
+    "express": <express_LATEST>,
+    "mongodb": <mongodb_LATEST>
+  },
+  "devDependencies": {
+    "nodemon": <nodemon_LATEST>
+  }
+}

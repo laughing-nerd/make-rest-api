@@ -1,0 +1,24 @@
+const express = require("express");
+const update = require("../controllers/update.js"); //Importing the delete controller
+
+const routes = express.Router();
+
+//Setup the update route
+//This basically sets up the /update endpoint and executes the 'update' function
+routes.route("/").patch(update);
+
+//You can also use PUT instead of PATCH
+//routes.route("/").put(update);
+
+module.exports = routes;
+<><>const update = async (req, res) => {
+  //Write PATCH or PUT logic here...
+  //const data = await mongoclient.db(<DB_NAME>).collection(<COLLECTION_NAME>).updateOne({ FILTER }, { REPLACE_WITH }) //This will update the document with REPLACE_WITH
+  //Example:
+  //await mongoclient.db("test").collection("test").insertOne({ _id:123 }. { name: "ABC", roll: 1234 });
+
+  res.status(200).json({ message: "PACTH or PUT Method" });
+}
+
+module.exports = update;
+

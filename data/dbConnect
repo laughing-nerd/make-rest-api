@@ -1,0 +1,19 @@
+require("dotenv").config();
+const { MongoClient, ServerApiVersion } = require('mongodb');
+
+//Change your DB_URI in .env file
+const mongoclient = new MongoClient(process.env.DBURI, {
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
+    }
+});
+
+const connection = async () =>{
+await mongoclient.connect();
+}
+
+connection();
+
+module.exports = mongoclient;
