@@ -1,4 +1,6 @@
-# rest-starter
+**You can find the package here: [make-rest-api](https://www.npmjs.com/package/make-rest-api)**
+
+# make-rest-api
 Just a random REST API creator.
 
 # Usage
