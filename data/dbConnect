@@ -11,7 +11,13 @@ const mongoclient = new MongoClient(process.env.DB_URI, {
 });
 
 const connection = async () =>{
-await mongoclient.connect();
+  try{
+    await mongoclient.connect();
+    console.log("Connected to database!");
+  }
+  catch(error){
+    console.log(error);
+  }
 }
 
 connection();
