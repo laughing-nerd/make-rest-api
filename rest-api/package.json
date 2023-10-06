@@ -1,5 +1,5 @@
 {
-  "name": <NAME>,
+  "name": "rest-api",
   "version": "1.0.0",
   "description": "Starter REST API",
   "main": "index.js",
@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": <cors_LATEST>,
-    "dotenv": <dotenv_LATEST>,
-    "express": <express_LATEST>,
-    "mongodb": <mongodb_LATEST>
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.1.0"
   },
   "devDependencies": {
-    "nodemon": <nodemon_LATEST>
+    "nodemon": "^3.0.1"
   }
 }

@@ -1,14 +1,4 @@
-const express = require("express");
-const del = require("../controllers/delete.js"); //Importing the delete controller
-
-const routes = express.Router();
-
-//Setup the delete route
-//This basically sets up the /delete endpoint and executes the 'del' function
-routes.route("/").delete(del);
-
-module.exports = routes;
-<><>const del = async (req, res) => {
+const del = async (req, res) => {
   //Write DELETE logic here...
   //const data = await mongoclient.db(<DB_NAME>).collection(<COLLECTION_NAME>).deleteOne({ <FILTER> }) //This will delete the data
   //Example:

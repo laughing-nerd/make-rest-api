@@ -5,7 +5,6 @@ import { exec } from "child_process";
 import chalk from "chalk";
 import path from "path";
 
-console.log(chalk.greenBright.bold("[BETA 1.0.0]"));
 //Create the necessary directories
 let directory = process.argv[2];
 if (directory === undefined)
@@ -19,7 +18,11 @@ const crud_files = ["create", "read", "update", "delete"];
 //----------------------------- Root files -----------------------------
 console.log("Sit back and relax!! We'll take care of everything...");
 let DIRNAME = new URL(import.meta.url).pathname;
-DIRNAME = DIRNAME.substring(0, DIRNAME.length - 9);
+if(process.env.OS == "Windows_NT")
+  DIRNAME = DIRNAME.substring(1, DIRNAME.length - 9);
+else
+  DIRNAME = DIRNAME.substring(0, DIRNAME.length - 9);
+
 
 //Create .env and .gitignore files
 fs.writeFile(`${directory}/.env`, "DB_URI=", ()=>{});
@@ -47,7 +50,7 @@ fs.writeFile(`${directory}/index.js`, index_data, ()=>{});
 let db_data = fs.readFileSync(path.join(DIRNAME, 'data', 'dbConnect'), "utf-8");
 fs.writeFile(`${directory}/dbConnect.js`, db_data, ()=>{});
 
-//----------------------------- Routes and Controllers -----------------------------
+// ----------------------------- Routes and Controllers -----------------------------
 const TARGET_DELIMITER = "<><>"
 for (const crud of crud_files) {
   const filedata = fs.readFileSync(path.join(DIRNAME, 'data', crud), 'utf-8');

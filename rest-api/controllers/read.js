@@ -1,14 +1,4 @@
-const express = require("express");
-const read = require("../controllers/read.js"); //Importing the read controller
-
-const routes = express.Router();
-
-//Setup the read route
-//This basically sets up the /read endpoint and executes the 'read' function
-routes.route("/").get(read);
-
-module.exports = routes;
-<><>const mongoclient = require("../dbConnect.js");
+const mongoclient = require("../dbConnect.js");
 const read = async (req, res) => {
   //Write your read logic here...
   //const data = await mongoclient.db(<DB_NAME>).collection(<COLLECTION_NAME>).find({ <SEARCH FILTER IF ANY> }).toArray(); //This will give search result from the database and will store as an array
