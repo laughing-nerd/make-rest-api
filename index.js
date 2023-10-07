@@ -18,8 +18,10 @@ const crud_files = ["create", "read", "update", "delete"];
 //----------------------------- Root files -----------------------------
 console.log("Sit back and relax!! We'll take care of everything...");
 let DIRNAME = new URL(import.meta.url).pathname;
-if(process.env.OS == "Windows_NT")
-  DIRNAME = DIRNAME.substring(1, DIRNAME.length - 9);
+if(process.env.OS == "Windows_NT"){
+  DIR = DIRNAME.substring(1, DIRNAME.length - 9);
+  DIRNAME = decodeURI(DIR);
+}
 else
   DIRNAME = DIRNAME.substring(0, DIRNAME.length - 9);
 
