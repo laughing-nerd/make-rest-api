@@ -1,6 +1,6 @@
 {
   "name": "make-rest-api",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A quick starter REST API creator for you. You can change the file configurations based on your requirements",
   "main": "index.js",
   "keywords": "REST API, REST API STARTER, Express REST API",
